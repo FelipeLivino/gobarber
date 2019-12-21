@@ -3,3 +3,7 @@ sudo docker run --name gobarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d post
 sudo docker run postgres
 sudo docker start gobarber
 sudo docker image list
+
+sudo docker run --name mongobarber  -p 27017:27017 -d -t mongo
+sudo docker run mongo
+sudo docker run mongobarber
