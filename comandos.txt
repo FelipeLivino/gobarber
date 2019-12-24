@@ -1,9 +1,19 @@
-sudo docker run --name gobarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+sudo docker image list
+sudo docker ps
 
+sudo docker run --name gobarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 sudo docker run postgres
 sudo docker start gobarber
-sudo docker image list
+sudo docker stats gobarber
+
 
 sudo docker run --name mongobarber  -p 27017:27017 -d -t mongo
 sudo docker run mongo
 sudo docker run mongobarber
+sudo docker stats mongobarber
+
+
+sudo docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+sudo docker run redis
+sudo docker run redisbarber
+sudo docker stats redisbarber
